@@ -43,7 +43,10 @@ spec:
         {{- else if eq $.Values.cloudprovider "azure" }}
         kind: AzureConfig
         {{- end}}
-        name: {{ $nodepool.name }}
+        name: nc-{{ $.Values.cluster.name }}-{{ $nodepool.name }}
+      {{- if $nodepool.os }}
+      machineOS: {{ $nodepool.os }}
+      {{- end}}
       paused: {{ $nodepool.paused }}
       displayName: {{ $nodepool.displayName }}
       {{- if $nodepool.rollingUpdate }}
