@@ -22,6 +22,9 @@ rke:
   # enable local auth endpoint
   localClusterAuthEndpoint:
     enabled: false
+  machineSelectorConfig:
+    # - config:
+    #     system-default-registry: registry.example.com
   # specify fqdn of local access endpoint
   # fqdn: foo.bar.example
   # specify cacert of local access endpoint
