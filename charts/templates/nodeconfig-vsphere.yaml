@@ -15,7 +15,8 @@ common:
 {{ toYaml $nodepool.taints | indent 4 }}
 {{- end }}
 {{- if $nodepool.cfgparam }}
-cfgparam: {{ $nodepool.cfgparam }}
+cfgparam:
+{{ toYaml $nodepool.cfgparam | indent 4 }}
 {{- end }}
 cloneFrom: {{ $nodepool.cloneFrom }}
 cloudConfig: |
@@ -65,7 +66,8 @@ common:
 {{ toYaml $nodepool.taints | indent 4 }}
 {{- end }}
 {{- if $nodepool.cfgparam }}
-cfgparam: {{ $nodepool.cfgparam }}
+cfgparam:
+{{ toYaml $nodepool.cfgparam | indent 4 }}
 {{- end }}
 cloneFrom: {{ $nodepool.cloneFrom }}
 cloudConfig: |

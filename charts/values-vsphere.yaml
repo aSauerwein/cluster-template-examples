@@ -67,7 +67,7 @@ nodepools:
 
   # vSphere vm configuration parameters (used for guestinfo)
   # cfgparam: []
-
+  # - disk.enableUUID=TRUE
   # If you choose creation type clone a name of what you want to clone is required
   # cloneFrom: ""
 
