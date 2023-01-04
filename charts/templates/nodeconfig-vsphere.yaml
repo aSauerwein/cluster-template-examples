@@ -33,6 +33,7 @@ folder: {{ $nodepool.folder }}
 hostsystem: {{ $nodepool.hostsystem }}
 memorySize: {{ $nodepool.memorySize | quote }}
 network: {{ $nodepool.network }}
+os: {{ $nodepool.os | default "linux"}}
 pool: {{ $nodepool.pool }}
 sshPort: {{ $nodepool.sshPort | quote }}
 sshUser: {{ $nodepool.sshUser }}
@@ -81,6 +82,7 @@ folder: {{ $nodepool.folder }}
 hostsystem: {{ $nodepool.hostsystem }}
 memorySize: {{ $nodepool.memorySize | quote }}
 network: {{ $nodepool.network }}
+os: {{ $nodepool.os | default "linux"}}
 pool: {{ $nodepool.pool }}
 sshPort: {{ $nodepool.sshPort | quote }}
 sshUser: {{ $nodepool.sshUser }}

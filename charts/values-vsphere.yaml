@@ -17,6 +17,9 @@ nodepools:
   # specify nodepool size
   quantity: 1
 
+  # specify nodepool os (linux, windows)
+  os: linux
+
   # Pause node pool
   paused: false
 
