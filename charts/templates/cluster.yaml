@@ -84,6 +84,9 @@ spec:
         kind: AzureConfig
         {{- end}}
         name: {{ $nodepool.name }}
+      {{- if $nodepool.os }}
+      machineOS: {{ $nodepool.os }}
+      {{- end}}
       paused: {{ $nodepool.paused }}
       displayName: {{ $nodepool.displayName }}
       {{- if $nodepool.rollingUpdate }}
@@ -168,6 +171,10 @@ spec:
         # cloud-provider-name: ""
         # Cloud provider configuration file path
         # cloud-provider-config: ""
+{{- if .Values.rke.registries }}
+    registries:
+{{ toYaml .Values.rke.registries | indent 6 }}
+{{- end }}
     {{- if .Values.rke.localClusterAuthEndpoint.enabled }}
     localClusterAuthEndpoint:
       enabled: {{ .Values.rke.localClusterAuthEndpoint.enabled }}
