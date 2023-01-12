@@ -143,8 +143,11 @@ spec:
       # service-cidr: "10.43.0.0/16"
       # Port range to reserve for services with NodePort visibility (default: "30000-32767")
       # service-node-port-range: "30000-32767"
-      # Add additional hostnames or IPv4/IPv6 addresses as Subject Alternative Names on the server TLS cert
       # tls-san: []
+      {{- if .Values.cluster.tlsSan }}
+      tls-san:
+{{ toYaml .Values.cluster.tlsSan | indent 8 }}
+      {{- end }}
 
     machineSelectorConfig:
 {{ toYaml .Values.rke.machineSelectorConfig | indent 6 }}

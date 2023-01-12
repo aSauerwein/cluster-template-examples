@@ -9,6 +9,11 @@ cluster:
   # specify cluster annotations
   annotations: {}
 
+  # Add additional hostnames or IPv4/IPv6 addresses as Subject Alternative Names on the server TLS cert
+  # tlsSan:
+  #   - 10.10.10.10
+  #   - kube-api.example.com
+    
 # specify cloud credential secret name, do not need to be provided if using custom driver
 cloudCredentialSecretName: ""
 
