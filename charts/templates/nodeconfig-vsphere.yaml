@@ -20,7 +20,7 @@ cfgparam:
 {{- end }}
 cloneFrom: {{ $nodepool.cloneFrom }}
 cloudConfig: |
-{{ $nodepool.cloudConfig | indent 2 }}
+{{ toYaml $nodepool.cloudConfig | indent 2 }}
 cloudinit: {{ $nodepool.cloudinit }}
 contentLibrary: {{ $nodepool.contentLibrary }}
 cpuCount: {{ $nodepool.cpuCount | quote }}
